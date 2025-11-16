@@ -1,0 +1,44 @@
+@use './variables/colors';
+@use './variables/fonts';
+@use './mixins/flex';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: colors.$color-background-gradient;
+  color: colors.$color-white;
+  font-weight: 400;
+  font-family: fonts.$ff-play;
+  margin: 0;
+  padding: 0;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+  z-index: -1;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: colors.$color-black;
+  text-decoration: none;
+}
